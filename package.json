@@ -1,0 +1,50 @@
+{
+  "name": "mpho-webgl-exhibition",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "wrangler dev",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "dev:vinext": "vite dev --port 3001",
+    "build:vinext": "vite build",
+    "start:vinext": "vite preview",
+    "deploy:vinext": "vinext-cloudflare deploy"
+  },
+  "dependencies": {
+    "@react-three/drei": "latest",
+    "@react-three/fiber": "latest",
+    "gsap": "latest",
+    "lenis": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-server-dom-webpack": "latest",
+    "three": "latest",
+    "vinext": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^2.0.0-beta.sha-52b0dc0e9",
+    "@cloudflare/vitest-pool-workers": "latest",
+    "@cloudflare/workers-types": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/three": "latest",
+    "@vinext/cloudflare": "^1.0.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "@vitejs/plugin-rsc": "^0.5.35",
+    "cf": "^1.0.0-beta.12",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest",
+    "vite": "^8.3.0",
+    "vitest": "latest",
+    "wrangler": "latest"
+  }
+}
