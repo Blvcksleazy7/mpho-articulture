@@ -1,14 +1,10 @@
 export default function Loading() {
   return (
     <section className="page-loader" aria-live="polite" aria-busy="true" aria-label="Loading page">
-      <div className="page-loader-mark" aria-hidden="true">
-        <span>MPHO</span>
-        <span>HLUNGWANE</span>
+      <div className="page-loader-logo" aria-hidden="true">
+        <img src="/images/mpho-logo-white.png" alt="" />
       </div>
-      <div className="page-loader-status">
-        <span>Preparing the exhibition</span>
-        <i aria-hidden="true"><b /><b /><b /></i>
-      </div>
+      <span className="sr-only">Loading page</span>
     </section>
   );
 }
