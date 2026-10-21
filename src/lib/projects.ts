@@ -25,6 +25,10 @@ export type Project = {
   source: string;
   alt: string;
   accent: string;
+  /** Present only where the supplied project material explicitly documents it. */
+  status?: string;
+  brief?: string;
+  outcomes?: Array<{ label: string; value: string }>;
   journey?: {
     chapter: string;
     theme: string;
@@ -45,10 +49,17 @@ export const architectureProjects: Project[] = [
     module: "Architectural Technology & Detailing 3",
     location: "Milpark, Johannesburg",
     summary: "A construction-ready drawing set for a hybrid concrete-and-steel student residence.",
-    cover: asset("milpark-plan.jpg"),
-    source: "Architecture portfolio.pdf, Project 4: Construction Project Architectural Working Drawings",
-    alt: "Annotated technical plan drawing for the Milpark student residence.",
+    cover: asset("milpark-cover.jpg"),
+    source: "covers.pdf, Project 4: Construction Project Architectural Working Drawings",
+    alt: "Exterior visualisation of the Milpark student residence.",
     accent: "#d2ff4d",
+    status: "Completed",
+    brief: "A construction-ready drawing set for a student residence, developed as a hybrid concrete-and-steel structure with basement parking, ground-floor amenities and a layered rooftop programme.",
+    outcomes: [
+      { label: "Structure", value: "Hybrid concrete + steel" },
+      { label: "Rooftop", value: "150 m² recreation + 60-seat theatre" },
+      { label: "Drawing set", value: "Model, plans, sections + elevations" },
+    ],
     journey: { chapter: "02", theme: "Formation", story: "Milpark is about learning the discipline of architecture: turning an idea into plans, sections, details and a construction-ready proposition." },
     milestones: [
       { title: "Buildable logic", eyebrow: "Construction", description: "Plans, sections, elevations, materials and junctions turn spatial design into a technical drawing set.", image: asset("milpark-plan.jpg") },
@@ -86,10 +97,17 @@ export const architectureProjects: Project[] = [
     module: "History & Theory of Architecture 3",
     location: "Johannesburg",
     summary: "A reconfiguration of the NE51/6 house typology through Tsonga homestead principles and the Xikundla courtyard.",
-    cover: asset("tsonga-hero.jpg"),
-    source: "Architecture portfolio.pdf, Assignment 1 Part 2",
-    alt: "Plan drawing for a Tsonga Muzi courtyard house.",
+    cover: asset("tsonga-cover.jpg"),
+    source: "covers.pdf, Assignment 1 Part 2",
+    alt: "Exterior visualisation of a brick Tsonga Muzi house and its street edge.",
     accent: "#f4efde",
+    status: "Completed",
+    brief: "A critical reconfiguration of the NE51/6 house typology on a 150 m² erf, using South African cultural homestead principles to reshape the plan, courtyard and street edge.",
+    outcomes: [
+      { label: "Site", value: "150 m² erf" },
+      { label: "Scales", value: "1:1000 urban scheme + 1:50 model" },
+      { label: "Focus", value: "Courtyard, thresholds, light + privacy" },
+    ],
     journey: { chapter: "01", theme: "Origin", story: "Tsonga Muzi returns to the language of home: threshold, courtyard, family life and the cultural memory that continues to shape Mpho's architectural imagination." },
     milestones: [
       { title: "Original", eyebrow: "NE51/6", description: "The existing typology collapses public and private life into a direct street-to-room sequence.", image: asset("tsonga-original.jpg") },
@@ -115,6 +133,31 @@ export const architectureProjects: Project[] = [
       { title: "Movement", eyebrow: "Street analysis", description: "Activity mapping identifies shifting pedestrian intensity, transit waiting and everyday street use.", image: asset("stanley-analysis.jpg") },
       { title: "Dwell time", eyebrow: "Urban oasis bench", description: "A canopy, bench, planter and storage integrate shelter, comfort and a more generous public edge.", image: asset("stanley-bench.jpg") },
       { title: "Site", eyebrow: "Intervention", description: "New seating, bike infrastructure and transport access enrich rather than replace the existing precinct.", image: asset("stanley-site.jpg") },
+    ],
+  },
+  {
+    slug: "furniture-by-architects",
+    number: "05",
+    title: "Furniture by Architects",
+    discipline: "Architecture",
+    year: "2026",
+    module: "Computers in Architecture 3 (CAD)",
+    location: "Digital modelling study",
+    summary: "A Revit study of iconic mid-century modern chairs, using furniture to extend architectural thinking through proportion, detail and digital craft.",
+    cover: asset("furniture-by-architects-cover.jpg"),
+    source: "covers.pdf, Furniture By Architects Brief 2",
+    alt: "Three iconic mid-century modern chairs in a warmly lit interior.",
+    accent: "#b78962",
+    status: "Completed",
+    brief: "A digital-skills exercise that models a set of nine iconic mid-century modern chairs in Autodesk Revit.",
+    outcomes: [
+      { label: "Software", value: "Autodesk Revit" },
+      { label: "Study set", value: "9 iconic chairs" },
+      { label: "Focus", value: "Digital modelling" },
+    ],
+    milestones: [
+      { title: "A set of nine", eyebrow: "Reference study", description: "Nine iconic mid-century modern chairs become a precise exercise in proportion, profile and construction logic.", image: asset("furniture-by-architects-cover.jpg") },
+      { title: "Digital craft", eyebrow: "Autodesk Revit", description: "The modelling process tests how an architectural workflow can hold object-scale detail and material character.", image: asset("furniture-by-architects-cover.jpg") },
     ],
   },
 ];
@@ -147,13 +190,45 @@ export const graphicProjects: Project[] = [
     module: "Interdisciplinary design",
     location: "Kwaggafontein",
     summary: "A manifesto poster and identity direction for a community-focused adaptive-reuse factory project.",
-    cover: asset("summit-poster.jpg"),
-    source: "summitposter.pdf",
-    alt: "Summit Potato Processor manifesto poster.",
+    cover: asset("summit-cover.jpg"),
+    source: "covers.pdf, Summit Potato Processor",
+    alt: "Summit Potato Processor identity montage with a golden factory-inspired mark.",
     accent: "#e3b65b",
+    status: "Completed",
+    brief: "A manifesto-led identity for a potato processor in Kwaggafontein, framing adaptive reuse as a community hub for learning, making and local profit.",
+    outcomes: [
+      { label: "Context", value: "Kwaggafontein industrial park" },
+      { label: "Scope", value: "Logo, manifesto + material palette" },
+      { label: "Applications", value: "Packaging, signage + digital" },
+    ],
     milestones: [
-      { title: "Manifesto", eyebrow: "Palimpsest of Labour", description: "An apartheid-era factory is reimagined as a community hub for learning, making and local profit.", image: asset("summit-poster.jpg") },
-      { title: "Mark", eyebrow: "Nature + industry", description: "Layered forms and earthy colour build a clear, scalable identity for product, signage and digital use.", image: asset("idp-dev.jpg") },
+      { title: "Manifesto", eyebrow: "Palimpsest of Labour", description: "An apartheid-era factory is reimagined as a community hub for learning, making and local profit.", image: asset("summit-manifesto.jpg") },
+      { title: "Mark", eyebrow: "Nature + industry", description: "Layered forms and earthy colour build a clear, scalable identity for product, signage and digital use.", image: asset("summit-identity-direction.jpg") },
+    ],
+  },
+  {
+    slug: "mpho-hlungwane-brand-identity",
+    number: "G03",
+    title: "Mpho Hlungwane Brand Identity",
+    discipline: "Graphic design",
+    year: "2026",
+    module: "Interdisciplinary Design 3 (BAID3Y3)",
+    location: "Personal identity study",
+    summary: "A personal visual identity that turns an architectural ethos into a modular mark, typographic voice and adaptable professional system.",
+    cover: asset("mpho-brand-identity-cover.jpg"),
+    source: "covers.pdf, Brand Identity Brief 1",
+    alt: "Mpho Hlungwane personal brand identity board with a dark green geometric logo.",
+    accent: "#3f6b5d",
+    status: "Completed",
+    brief: "A personal design identity developed as a professional trademark through logo making, typography, colour theory, grid systems and brand applications.",
+    outcomes: [
+      { label: "Identity", value: "Logo, type + colour system" },
+      { label: "Method", value: "Grid-led visual language" },
+      { label: "Applications", value: "Business card + email signature" },
+    ],
+    milestones: [
+      { title: "Professional trademark", eyebrow: "Logo", description: "A modular mark establishes a recognisable visual signature for Mpho Hlungwane’s design practice.", image: asset("mpho-brand-identity-cover.jpg") },
+      { title: "A working system", eyebrow: "Typography + colour", description: "Typography, colour theory and grid systems turn the mark into a clear identity across professional touchpoints.", image: asset("mpho-brand-identity-system.jpg") },
     ],
   },
 ];
@@ -167,11 +242,18 @@ export const interdisciplinaryStudy: Project = {
   module: "Interdisciplinary Design 3",
   location: "Self portrait study",
   summary: "An abstract self-portrait exploring the tension between a calm exterior and a rich interior world.",
-  cover: asset("still-water.jpg"),
-  source: "Architecture portfolio.pdf, Self Portrait Brief 2",
-  alt: "Research and concept board for the Still Water self-portrait study.",
+  cover: asset("still-water-cover.jpg"),
+  source: "covers.pdf, Self Portrait Brief 2",
+  alt: "Abstract gestural self-portrait in black ink on a pale ground.",
   accent: "#a4b1da",
-  milestones: [{ title: "Still Water", eyebrow: "Concept", description: "The study draws on Egon Schiele to explore restraint, negative space and internal depth.", image: asset("still-water.jpg") }],
+  status: "Completed",
+  brief: "A non-literal abstract self-portrait made across a minimum of three media, informed by research into an established self-portrait artist and a representational process.",
+  outcomes: [
+    { label: "Media", value: "Three or more" },
+    { label: "Deliverables", value: "A2 portrait + conceptual poster" },
+    { label: "Process", value: "Reference research + abstraction" },
+  ],
+  milestones: [{ title: "Still Water", eyebrow: "Concept", description: "The study draws on Egon Schiele to explore restraint, negative space and internal depth.", image: asset("still-water-analysis.jpg") }],
 };
 
 export const allProjects = [...architectureProjects, ...graphicProjects, interdisciplinaryStudy];
