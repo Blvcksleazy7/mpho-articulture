@@ -260,6 +260,14 @@ export const allProjects = [...architectureProjects, ...graphicProjects, interdi
 
 export const journeyProjects = ["tsonga-muzi", "milpark-student-residence", "coffee-tea-cocoa-headquarters", "44-stanley-urban-oasis"].map((slug) => architectureProjects.find((project) => project.slug === slug)!);
 
+/** Supporting studies shown after the homepage’s fixed four-part narrative. */
+export const frontpageStudies = [
+  architectureProjects.find((project) => project.slug === "furniture-by-architects")!,
+  interdisciplinaryStudy,
+  graphicProjects.find((project) => project.slug === "summit-potato-processor")!,
+  graphicProjects.find((project) => project.slug === "mpho-hlungwane-brand-identity")!,
+];
+
 export function getProjectBySlug(slug: string): Project | undefined {
   return allProjects.find((project) => project.slug === slug);
 }
