@@ -160,6 +160,32 @@ export const architectureProjects: Project[] = [
       { title: "Digital craft", eyebrow: "Autodesk Revit", description: "The modelling process tests how an architectural workflow can hold object-scale detail and material character.", image: asset("furniture-by-architects-cover.jpg") },
     ],
   },
+  {
+    slug: "family-yard-plan",
+    number: "06",
+    title: "Family Yard Plan",
+    discipline: "Architecture",
+    year: "Undated",
+    module: "Independent family commission",
+    location: "Private family home",
+    summary: "A commissioned ground-floor plan that gives a family’s rooms, circulation and yard a clear spatial order.",
+    cover: asset("family-yard-build-exterior.jpg"),
+    source: "New Plan 2.pdf and supplied construction photographs",
+    alt: "Brick family home under construction, with a large opening facing the yard.",
+    accent: "#c16f3d",
+    status: "Build-stage documentation",
+    brief: "A family asked Mpho to prepare a plan for their home, with the yard treated as an intentional outdoor room rather than residual space.",
+    outcomes: [
+      { label: "Drawing", value: "Ground floor plan / 1:25" },
+      { label: "Commission", value: "Private family home" },
+      { label: "Spatial focus", value: "Rooms, circulation + yard" },
+    ],
+    milestones: [
+      { title: "Plan for the yard", eyebrow: "Ground floor / 1:25", description: "Measured rooms, openings and circulation establish a practical arrangement around an outdoor family space.", image: asset("family-yard-plan.jpg") },
+      { title: "Opening to outside", eyebrow: "Build stage", description: "A large yard-facing opening makes the relationship between interior and outdoor space legible in construction.", image: asset("family-yard-build-exterior.jpg") },
+      { title: "Details that matter", eyebrow: "Services + thresholds", description: "Brickwork, service lines and interior openings show where drawing decisions meet material reality.", image: asset("family-yard-build-services.jpg") },
+    ],
+  },
 ];
 
 export const graphicProjects: Project[] = [

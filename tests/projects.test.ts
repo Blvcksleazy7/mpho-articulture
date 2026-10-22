@@ -10,6 +10,7 @@ describe("project registry", () => {
       "tsonga-muzi",
       "44-stanley-urban-oasis",
       "furniture-by-architects",
+      "family-yard-plan",
     ]);
   });
 
@@ -36,7 +37,7 @@ describe("project registry", () => {
   });
 
   it("resolves every newly documented study", () => {
-    ["furniture-by-architects", "mpho-hlungwane-brand-identity", "still-water"].forEach((slug) => {
+    ["furniture-by-architects", "family-yard-plan", "mpho-hlungwane-brand-identity", "still-water"].forEach((slug) => {
       expect(getProjectBySlug(slug)).toBeDefined();
     });
   });
