@@ -183,7 +183,6 @@ export const architectureProjects: Project[] = [
     milestones: [
       { title: "Plan for the yard", eyebrow: "Ground floor / 1:25", description: "Measured rooms, openings and circulation establish a practical arrangement around an outdoor family space.", image: asset("family-yard-plan.jpg") },
       { title: "Courtyard arrangement", eyebrow: "Model view 01", description: "A raised model view tests the relationship between the main house, the yard and the perimeter walls as one family setting.", image: asset("family-yard-model-courtyard.jpg") },
-      { title: "The yard as a room", eyebrow: "Model view 02", description: "A second angle makes the open yard legible as the shared space between the buildings, rather than an area left over after planning.", image: asset("family-yard-model-rear.jpg") },
       { title: "Arrival and enclosure", eyebrow: "Model view 03", description: "The entry-side view studies the route from the threshold into the protected outdoor space.", image: asset("family-yard-model-entry.jpg") },
       { title: "Opening to outside", eyebrow: "Build stage", description: "A large yard-facing opening makes the relationship between interior and outdoor space legible in construction.", image: asset("family-yard-build-exterior.jpg") },
       { title: "Details that matter", eyebrow: "Services + thresholds", description: "Brickwork, service lines and interior openings show where drawing decisions meet material reality.", image: asset("family-yard-build-services.jpg") },
